@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CulinaryCompanion" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Required for Material components -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog</item>
+    </style>
+
+    <style name="Theme.CulinaryCompanion" parent="Base.Theme.CulinaryCompanion" />
+
+
+</resources>

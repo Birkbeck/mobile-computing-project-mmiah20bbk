@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Add Recipe"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/recipeImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/baseline_add_a_photo_24"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/titleTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            app:boxStrokeColor="@color/green"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleTIET"
+                android:hint="Title"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/descriptionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/green"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionTIET"
+                android:hint="Description"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:lines="3"
+                android:gravity="top|start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/ingredientTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/green"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ingredientTIET"
+                android:hint="Enter ingredients\n(e.g. sugar, salt, flour)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:gravity="top|start"
+                android:layout_marginTop="0dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/instructionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/green"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/instructionTIET"
+                android:hint="Cooking Instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:gravity="top|start"
+                android:layout_marginTop="0dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Category"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="dropdown_menu"
+            app:boxStrokeColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/category_auto_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"
+                android:padding="10dp"
+                android:completionThreshold="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:text="Save Recipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/green"/>
+
+    </LinearLayout>
+
+</ScrollView>

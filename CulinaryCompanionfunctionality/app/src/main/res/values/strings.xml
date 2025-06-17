@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Culinary Companion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="category_list">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snacks</item>
+        <item>Dessert</item>
+        <item>Beverage</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/baseline_arrow_back_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Edit Recipe"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/recipeImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/baseline_add_a_photo_24"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/titleTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            app:boxStrokeColor="@color/green"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleTIET"
+                android:hint="Title"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/descriptionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/green"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionTIET"
+                android:hint="Description"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:lines="3"
+                android:gravity="top|start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/ingredientTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/green"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ingredientTIET"
+                android:hint="Enter ingredients\n(e.g. sugar, salt, flour)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:gravity="top|start"
+                android:layout_marginTop="0dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/instructionTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/green"
+            app:cursorColor="@color/green"
+            app:hintTextColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/instructionTIET"
+                android:hint="Cooking Instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:gravity="top|start"
+                android:layout_marginTop="0dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Category"
+            app:endIconMode="dropdown_menu"
+            app:boxStrokeColor="@color/green"
+            android:layout_marginTop="0dp">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/categoryAutoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"
+                android:padding="10dp"
+                android:completionThreshold="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/green"
+            android:text="Edit Recipe"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
+</ScrollView>
