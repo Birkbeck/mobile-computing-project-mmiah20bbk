@@ -1,6 +1,5 @@
 package com.cc.culinarycompanion.fragments;
 
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -17,7 +16,6 @@ import com.cc.culinarycompanion.R;
 import com.cc.culinarycompanion.databinding.FragmentRecipeDetailBinding;
 
 public class RecipeDetailFragment extends Fragment {
-
 
     private FragmentRecipeDetailBinding binding;
 
@@ -41,7 +39,6 @@ public class RecipeDetailFragment extends Fragment {
         instructions = bundle.getString("instructions");
         category = bundle.getString("category");
         imageUri = bundle.getString("image_uri");
-//        recipeId = getArguments().getInt("recipeId", -1);
 
         // display data in fields
         binding.recipeTitle.setText(name);

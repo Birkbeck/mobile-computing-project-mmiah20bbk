@@ -1,15 +1,11 @@
 package com.cc.culinarycompanion.fragments;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -18,7 +14,6 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.cc.culinarycompanion.R;
@@ -26,8 +21,6 @@ import com.cc.culinarycompanion.adapters.RecipeAdapter;
 import com.cc.culinarycompanion.databinding.FragmentHomeBinding;
 import com.cc.culinarycompanion.models.Recipe;
 import com.cc.culinarycompanion.roomdb.RecipeViewModel;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-
 
 public class HomeFragment extends Fragment {
 
@@ -46,12 +39,6 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.bind(view);
 
         navController = NavHostFragment.findNavController(this);
-        binding.btnEdit.setOnClickListener(v -> {
-
-            navController.navigate(R.id.action_homeFragment_to_editRecipeFragment);
-
-        });
-
 
         // search the recipe
         binding.editTextSearch.addTextChangedListener(new TextWatcher() {
@@ -124,6 +111,15 @@ public class HomeFragment extends Fragment {
     private void setupViewModel() {
         recipeViewModel = new ViewModelProvider(this).get(RecipeViewModel.class);
         recipeViewModel.getAllRecipes().observe(getViewLifecycleOwner(), recipes -> {
+            if (recipes.isEmpty()) {
+                binding.emptyText.setVisibility(View.VISIBLE);
+                binding.recipeRecyclerView.setVisibility(View.GONE);
+
+            } else {
+                binding.emptyText.setVisibility(View.GONE);
+                binding.recipeRecyclerView.setVisibility(View.VISIBLE);
+
+            }
             adapter.setRecipes(recipes);
         });
     }

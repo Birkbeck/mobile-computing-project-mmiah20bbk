@@ -9,16 +9,13 @@ import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
 import com.cc.culinarycompanion.R;
@@ -160,6 +157,5 @@ public class AddRecipeFragment extends Fragment {
         selectedImageUri = null;
 
     }
-
 
 }

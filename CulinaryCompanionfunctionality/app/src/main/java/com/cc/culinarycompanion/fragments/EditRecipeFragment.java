@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +29,6 @@ import com.cc.culinarycompanion.roomdb.RecipeViewModel;
 public class EditRecipeFragment extends Fragment {
 
     private FragmentEditRecipeBinding binding;
-    ImageView backBtn;
     private NavController navController;
     RecipeViewModel recipeViewModel;
     private ActivityResultLauncher<Intent> imagePickerLauncher;
@@ -68,11 +66,6 @@ public class EditRecipeFragment extends Fragment {
         String[] categories = getResources().getStringArray(R.array.category_list);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, categories);
         binding.categoryAutoComplete.setAdapter(adapter);
-
-        // ✅ Force dropdown to appear on click
-//        binding.categoryAutoComplete.setOnClickListener(v -> {
-//            binding.categoryAutoComplete.showDropDown();
-//        });
 
         recipeViewModel = new ViewModelProvider(this).get(RecipeViewModel.class);
 

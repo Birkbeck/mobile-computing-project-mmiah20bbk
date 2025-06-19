@@ -35,8 +35,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     }
 
     public void setRecipes(List<Recipe> recipes) {
-//        this.recipeList = recipes;
-//        notifyDataSetChanged();
 
         fullRecipeList.clear();
         fullRecipeList.addAll(recipes);
